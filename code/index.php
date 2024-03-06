@@ -46,3 +46,15 @@ $order .= ' and fries';
 
  echo "Степень: ". (8**2);
  echo "\n";
+
+
+
+ $my_num = 56;
+ $answer = $my_num;
+ $answer += 2;
+ $answer *= 2;
+ $answer -= 2;
+ $answer /= 2;
+ $answer -= $my_num;
+ echo "Если всё пошло по плану: ".$answer;
+ echo "\n";
