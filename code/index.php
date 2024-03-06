@@ -181,3 +181,13 @@ foreach ($arrSumm as $value){
 }
 echo $k;
 echo "\n";
+
+// Функции
+
+function printStringReturnNumber($str){
+    echo $str."\n"."Len: ".strlen($str);
+}
+$my_str = "Hello, my name is Vladimir";
+
+echo printStringReturnNumber($my_str);
+echo "\n";
