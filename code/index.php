@@ -4,7 +4,8 @@
 
 
 // Write your code here:
-
+$order = &$very_bad_unclear_name;
+$order .= ' and fries';
 
   
  // Don't change the line below
