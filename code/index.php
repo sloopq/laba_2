@@ -191,3 +191,61 @@ $my_str = "Hello, my name is Vladimir";
 
 echo printStringReturnNumber($my_str);
 echo "\n";
+
+
+$str = "I'm fine";
+function increaseEnthusiasm($string){
+    echo $string."!";
+}
+echo increaseEnthusiasm($str);
+echo "\n";
+
+$str = "How are U?";
+function  repeatThreeTimes($string, $times){
+    for ($i = 0; $i < $times; $i++){
+        echo $string." ";
+    }
+}
+echo  repeatThreeTimes($str,3);
+echo "\n";
+echo  increaseEnthusiasm(repeatThreeTimes($str,3));
+echo "\n";
+
+$str = "123456789123456";
+function cut($string, $k = 10){
+    echo substr($string,$k);
+}
+echo cut($str);
+echo "\n";
+
+function recursityElenemt($array, $index = 0){
+    if($index < count($array)){
+        echo $array[$index]." ";
+        recursityElenemt($array, $index+1);
+    }
+}
+$array = [1, 2, 3, 4, 5];
+echo recursityElenemt($array);
+echo "\n";
+
+
+
+
+function sumDig($number){
+    $sum = 0;
+    while ($number > 0 || $sum > 9){
+        if ($number == 0) {
+            $number = $sum;
+            $sum = 0;
+        }
+        $sum += $number % 10;
+        $number = (int)($number / 10); 
+    }
+    echo $sum;
+
+}
+$a = 987654321;
+echo sumDig($a);
+echo "\n";
+
+
