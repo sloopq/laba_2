@@ -247,5 +247,3 @@ function sumDig($number){
 $a = 987654321;
 echo sumDig($a);
 echo "\n";
-
-
