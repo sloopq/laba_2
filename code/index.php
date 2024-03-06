@@ -31,3 +31,13 @@ $order .= ' and fries';
 
  echo "Разница " . ($last_month - $this_month);
  echo "\n";
+
+
+
+ $num_languages = 4;
+ $months = 11;
+ $days = $months * 16;
+
+ $daysPerLangue = $days / 4;
+ echo "Дней на каждый язык: ".$daysPerLangue;
+ echo "\n";
