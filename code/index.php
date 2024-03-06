@@ -41,3 +41,8 @@ $order .= ' and fries';
  $daysPerLangue = $days / 4;
  echo "Дней на каждый язык: ".$daysPerLangue;
  echo "\n";
+
+
+
+ echo "Степень: ". (8**2);
+ echo "\n";
