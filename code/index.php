@@ -434,3 +434,35 @@ for ($i = 1;$i<=20;$i++){
     }
     echo "\n";
 }
+
+//ex 20 Combination of functions
+
+
+$arr = [2,4,8,10];
+$srAr = array_sum($arr) / count($arr);
+echo "Среднее арифметическое: ".$srAr;
+echo "\n";
+
+// Сумма чисел от 1 до 100
+$i = 100;
+$sum = ($i * ($i + 1)) / 2; // Формула арифметической прогрессии
+
+echo "Сумма чисел от 1 до 100: " . $sum;
+echo "\n"; 
+
+// Квадратные корни
+$arr = [4,9,16,25];
+print_r(array_map("sqrt", $arr));
+echo "\n"; 
+
+
+// Сумма пар чисел
+
+$str = '1234567890';
+$sum = array_sum(str_split($str, 2)); // после применения str_split str превращается в массив -> можно использовать array_sum
+print_r($sum);
+echo "\n"; 
+
+$keys = range("a","z"); // range — Создаёт массив, содержащий диапазон элементов
+$value = range(1,26);
+print_r(array_combine($keys,$value)); //array_combine — Создаёт новый массив, используя один массив в качестве ключей, а другой для его значений
