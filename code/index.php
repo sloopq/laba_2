@@ -241,9 +241,122 @@ function sumDig($number){
         $sum += $number % 10;
         $number = (int)($number / 10); 
     }
-    echo $sum;
+    echo $sum;  
 
 }
 $a = 987654321;
 echo sumDig($a);
+echo "\n";
+
+
+$array = [];
+$k = 5;
+for ($i = 1; $i <= $k; $i++) {
+    $string = "";
+    for ($j = 0; $j < $i; $j++){
+        $string .= 'x';
+    }
+    $array[] = $string;
+}
+print_r($array);
+
+// Еще можно через str_repeat
+$array = [];
+$k = 5;
+for ($i = 1; $i<=$k; $i++){
+    $array[] = str_repeat("x", $i);
+}
+print_r($array);
+//arrayFill
+function arrayFill($string, $k){
+    for ($i = 0; $i<$k; $i++){
+        $array[] = $string;
+   }
+   print_r($array);
+}
+
+echo arrayFill("k", 6);
+
+//Дан двухмерный массив с числами, например [[1, 2, 3], [4, 5], [6]].
+//Найдите сумму элементов этого массива. 
+//Массив, конечно же, может быть произвольным
+
+function sumOfArrays($array){
+    $sum = 0;
+    foreach ($array as $subArray){
+        foreach ($subArray as $value){
+            $sum += $value;
+        }
+    }
+    echo $sum;
+}
+
+$array = [[1,2],[3,5]];
+echo sumOfArrays($array);
+echo "\n";
+
+$arr = [];
+$n=1;
+$rows = 3;
+$cols = 3;
+for ($i = 0; $i< $rows; $i++){
+    $subArr = [];
+    for ($j = 0; $j< $cols; $j++){
+        $subArr[] = $n;
+        $n++;
+    }
+    $arr[] = $subArr;
+}
+print_r($arr);
+
+$arr = [2,5,3,9];
+$result = $arr[0] * $arr[1] + $arr[2] * $arr[3];
+echo $result;
+echo "\n";
+
+
+$user = [
+    "name" => "Vladimir",
+    "username" => "Beloded",
+    "patronymic" => "Sergeevich"
+
+];
+
+echo $user["name"]." ".$user["username"]." ".$user["patronymic"];
+echo "\n";
+
+
+$date = [
+    "year" => "2024",
+    "month" => "03",
+    "day" => "08"
+
+];
+
+echo $date["year"]."-".$date["month"]."-".$date["day"];
+echo "\n";
+
+
+// Количество элементов в массиве
+
+$arr = ["a","b","c","d","e"];
+$n = 0;
+foreach ($arr as $value){
+    $n+=1;
+}
+echo "Количество элементов в массиве: ".$n;
+echo "\n";
+
+// Последний и предпоследний элементы
+
+$arr = ["a","b","c","d","e"];
+$n = 0;
+foreach ($arr as $value){
+    $n+=1;
+}
+echo "Последний и предпоследний элементы: ";
+echo "\n";
+echo $arr[($n-1)];
+echo "\n";
+echo $arr[($n-2)];
 echo "\n";
