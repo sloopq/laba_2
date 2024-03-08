@@ -360,3 +360,66 @@ echo $arr[($n-1)];
 echo "\n";
 echo $arr[($n-2)];
 echo "\n";
+
+//Конструкция if else
+
+
+function sum10($a,$b){
+    if ($a+$b > 10){
+        echo "true";
+    }
+    else{
+        echo "false"; 
+    }    
+}
+echo sum10(2,1);
+echo "\n";
+
+
+function equalNumber($a,$b){
+    if ($a == $b){
+        echo "true";
+    }
+    else{
+        echo "false"; 
+    }    
+}
+echo equalNumber(2,1);
+echo "\n";
+$int = 100;
+echo ($int == 0) ? "Верно" : "Неверно";
+echo "\n";
+
+
+function numberInTheRange($a){
+    if ($a < 10 || $a > 99){
+        echo "число меньше 10 или больше 99";
+    }
+    else{
+        if ((($a % 10) + floor($a / 10)) <= 9){
+            echo "сумма цифр однозначна";
+        }
+        else{
+            echo "сумма цифр двузначна";
+        }
+    }
+}
+
+echo numberInTheRange(28);
+echo "\n";
+
+
+$arr = [1,5,7,53];
+$n = 0;
+foreach ($arr as $value){
+    $n++;
+}
+if ($n == 3){
+    $sum = $arr[0] + $arr[1] + $arr[2];
+    echo $sum;
+    echo "\n";
+}
+else{
+    echo "В массиве не 3 элемента";
+    echo "\n";
+}
