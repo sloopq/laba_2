@@ -9,7 +9,7 @@ $order .= ' and fries';
 
   
  // Don't change the line below
- echo "\nYour order is: $very_bad_unclear_name.";
+ echo "\n Your order is: $very_bad_unclear_name.";
  echo "\n";
 
 
@@ -29,7 +29,7 @@ $order .= ' and fries';
  $last_month = 1187.23;
  $this_month = 1089.98;
 
- echo "Разница " . ($last_month - $this_month);
+ echo "Разница ($last_month - $this_month)";
  echo "\n";
 
 
@@ -39,7 +39,7 @@ $order .= ' and fries';
  $days = $months * 16;
 
  $daysPerLangue = $days / 4;
- echo "Дней на каждый язык: ".$daysPerLangue;
+ echo "Дней на каждый язык: $daysPerLangue";
  echo "\n";
 
 
@@ -56,30 +56,30 @@ $order .= ' and fries';
  $answer -= 2;
  $answer /= 2;
  $answer -= $my_num;
- echo "Если всё пошло по плану: ".$answer;
+ echo "Если всё пошло по плану: $answer";
  echo "\n";
 
 
 
  $a=10;
  $b=3;
- echo "Остаток от деления а на б: " . ($a % $b);
+ echo "Остаток от деления а на б: ($a % $b)";
  echo "\n";
 
  if ($a % $b == 0){
     echo 'Делится '.($a / $b);
  }else{
-    echo "Делится с остатком: ".($a % $b);
+    echo "Делится с остатком: ($a % $b)";
  }
  echo "\n";
 
 
 
  $st = pow(2,10);
- echo "2 в 10й степени: ".$st;
+ echo "2 в 10й степени: $st";
  echo "\n";
  $st = sqrt(245);
- echo "Корень из 245: ".$st;
+ echo "Корень из 245: $st";
  echo "\n";
 
  $array = [4, 2, 5, 19, 13, 0, 10];
@@ -89,7 +89,7 @@ $order .= ' and fries';
     $sumOnSquares += pow($value,2);
  }
  $sqrt = sqrt($sumOnSquares);
- echo "Квадратный корень из суммы квадратов: ".$sqrt;
+ echo "Квадратный корень из суммы квадратов: $sqrt";
  echo "\n";
 
 
@@ -120,12 +120,12 @@ $array1 = [4, -2, 5, 19, -130, 0, 10];
 $min = min($array1);
 $max = max($array1);
 echo "\n";
-echo "Минимальное число: ".$min,"\n", "Максимальное число: ".$max;
+echo "Минимальное число: $min \n", "Максимальное число: $max";
 echo "\n";
 
 
 $r = rand(1,100);
-echo "Случайное число: ".$r;
+echo "Случайное число: $r";
 echo "\n";  
 
 $arrRand = [];
@@ -134,9 +134,9 @@ for ($i = 0; $i<10; $i++){
 }
 $mass = "";
 foreach ($arrRand as $number){
-    $mass .= $number." ";
+    $mass .= "$number ";
 }
-echo "Массив случайных чисел: ".$mass;
+echo "Массив случайных чисел: $mass";
 echo "\n"; 
 
 
@@ -158,7 +158,7 @@ print_r($arrModNew);
 $k = 14;
 $mass = "";
 for ($i = 1; $i<$k; $i++){
-    if ($k%$i == 0){
+    if ($k  % $i == 0){
         $mass .= " ".$i;
     }
 }
@@ -176,7 +176,7 @@ foreach ($arrSumm as $value){
     }
     else{
         $summ += $value;
-        $k+=1;
+        $k += 1;
     }
 }
 echo $k;
@@ -251,7 +251,7 @@ echo "\n";
 
 $array = [];
 $k = 5;
-for ($i = 1; $i <= $k; $i++) {
+for ($i = 1; $i < ($k + 1); $i++) {
     $string = "";
     for ($j = 0; $j < $i; $j++){
         $string .= 'x';
@@ -263,7 +263,7 @@ print_r($array);
 // Еще можно через str_repeat
 $array = [];
 $k = 5;
-for ($i = 1; $i<=$k; $i++){
+for ($i = 1; $i < ($k+1); $i++){
     $array[] = str_repeat("x", $i);
 }
 print_r($array);
@@ -344,7 +344,7 @@ $n = 0;
 foreach ($arr as $value){
     $n+=1;
 }
-echo "Количество элементов в массиве: ".$n;
+echo "Количество элементов в массиве: $n";
 echo "\n";
 
 // Последний и предпоследний элементы
@@ -396,7 +396,7 @@ function numberInTheRange($a){
         echo "число меньше 10 или больше 99";
     }
     else{
-        if ((($a % 10) + floor($a / 10)) <= 9){
+        if ((($a % 10) + floor($a / 10)) < 10){
             echo "сумма цифр однозначна";
         }
         else{
@@ -427,8 +427,8 @@ else{
 
 //ex 19 Cycles
 $n = 0;
-for ($i = 1;$i<=20;$i++){
-    for ($j = 1;$j<=$i;$j++){
+for ($i = 1; $i < 21; $i++){
+    for ($j = 1; $j < ($i+1); $j++){
         echo "x";
        
     }
@@ -440,14 +440,14 @@ for ($i = 1;$i<=20;$i++){
 
 $arr = [2,4,8,10];
 $srAr = array_sum($arr) / count($arr);
-echo "Среднее арифметическое: ".$srAr;
+echo "Среднее арифметическое: $srAr";
 echo "\n";
 
 // Сумма чисел от 1 до 100
 $i = 100;
 $sum = ($i * ($i + 1)) / 2; // Формула арифметической прогрессии
 
-echo "Сумма чисел от 1 до 100: " . $sum;
+echo "Сумма чисел от 1 до 100: $sum";
 echo "\n"; 
 
 // Квадратные корни
@@ -465,4 +465,4 @@ echo "\n";
 
 $keys = range("a","z"); // range — Создаёт массив, содержащий диапазон элементов
 $value = range(1,26);
-print_r(array_combine($keys,$value)); //array_combine — Создаёт новый массив, используя один массив в качестве ключей, а другой для его значений
+print_r(array_combine($keys , $value)); //array_combine — Создаёт новый массив, используя один массив в качестве ключей, а другой для его значений
